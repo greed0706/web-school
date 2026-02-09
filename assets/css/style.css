@@ -1,0 +1,398 @@
+/* Green */
+/* Red */
+/* =========================================
+   BASE STYLES
+   ========================================= */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #002147;
+  font-weight: 700;
+}
+
+a {
+  color: #002147;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+a:hover {
+  color: #1D8843;
+  text-decoration: none;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  position: relative;
+}
+.section-title .subtitle {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #cb2f1f;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.section-title .title {
+  font-size: 36px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.section-title .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #1D8843;
+}
+.section-title p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+}
+
+/* =========================================
+   SECTIONS STYLES - UNIPIX INSPIRED
+   ========================================= */
+/* 2. ACADEMICS & PROGRAM */
+.academics-program {
+  background-color: #fff5f6;
+}
+.academics-program .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.academics-program .section-title .subtitle {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #cb2f1f;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.academics-program .section-title .title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111029;
+  margin-bottom: 0;
+}
+
+/* Grid Container - Unipix Style */
+.academics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 24px;
+  max-height: 460px;
+}
+@media (max-width: 991px) {
+  .academics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Base Item Styling */
+.academics-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.academics-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Stats Box - Top Left */
+.stats-box {
+  background-color: #111029;
+  padding: 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Grid Placement */
+  grid-column: 1;
+  grid-row: 1;
+}
+@media (max-width: 991px) {
+  .stats-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+.stats-box .d-flex {
+  align-items: center;
+}
+.stats-box .icon i {
+  font-size: 28px;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+.stats-box .stars {
+  color: #fff;
+  font-size: 14px;
+}
+.stats-box .stars .font-weight-bold {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.stats-box .stars i {
+  color: #ffc107;
+  font-size: 12px;
+}
+.stats-box h4 {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/* Undergraduate Box - Below Stats */
+.undergrad-box {
+  background: linear-gradient(145deg, #9333ea, #7c3aed);
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Grid Placement */
+  grid-column: 1;
+  grid-row: 2/span 2;
+}
+@media (max-width: 991px) {
+  .undergrad-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+.undergrad-box .content {
+  position: relative;
+  z-index: 2;
+}
+.undergrad-box .content .icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.undergrad-box .content .icon i {
+  font-size: 24px;
+  margin-right: 12px;
+}
+.undergrad-box .content .icon span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.undergrad-box .content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.undergrad-box .content ul li {
+  margin-bottom: 10px;
+}
+.undergrad-box .content ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+.undergrad-box .content ul li a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+.undergrad-box .content ul li a i {
+  font-size: 10px;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+.undergrad-box img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 180px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+/* Main Image Box - Center Tall */
+.main-image-box {
+  background-color: #800000;
+  /* Grid Placement */
+  grid-column: 2;
+  grid-row: 1/span 3;
+  min-height: 380px;
+}
+@media (max-width: 991px) {
+  .main-image-box {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 300px;
+  }
+}
+.main-image-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Image Box (Library/Student Life) - Top Right */
+.image-box {
+  min-height: 200px;
+  position: relative;
+  /* Grid Placement */
+  grid-column: 3;
+  grid-row: 1/span 2;
+  /* Overlay text label */
+}
+@media (max-width: 991px) {
+  .image-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+/* Graduate Box - Bottom Right */
+.grad-box {
+  background-color: #1e1b4b;
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Grid Placement */
+  grid-column: 3;
+  grid-row: 3;
+}
+@media (max-width: 991px) {
+  .grad-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+.grad-box .content {
+  position: relative;
+  z-index: 2;
+}
+.grad-box .content .icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.grad-box .content .icon i {
+  font-size: 24px;
+  margin-right: 12px;
+}
+.grad-box .content .icon span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.grad-box .content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.grad-box .content ul li {
+  margin-bottom: 10px;
+}
+.grad-box .content ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+.grad-box .content ul li a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+.grad-box .content ul li a i {
+  font-size: 10px;
+  margin-right: 10px;
+  opacity: 0.7;
+}
+.grad-box img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 140px;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+/* Explore Button - Unipix Style */
+.btn-explore {
+  background-color: #ef4444;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-explore:hover {
+  background-color: #dc2626;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+}
+.btn-explore i {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+.btn-explore:hover i {
+  transform: translateX(5px);
+}
