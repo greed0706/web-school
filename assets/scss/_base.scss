@@ -34,9 +34,12 @@ a {
 }
 
 .section-container {
+    display: flex;
+    flex-direction: column;
     max-width: 1260px;
     margin: 0 auto;
     padding: 0 15px;
+    gap: 50px 50px;
 }
 
 .section-title {
@@ -54,26 +57,46 @@ a {
     }
 
     .title {
-        font-size: 36px;
+        font-size: 64px;
+        line-height: 1.2em;
         margin-bottom: 15px;
         position: relative;
         padding-bottom: 15px;
+        gap: 50px 50px;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: $primary-color;
-        }
     }
 
     p {
         max-width: 700px;
         margin: 0 auto;
         color: #666;
+    }
+}
+
+.ex-btn {
+    display: flex;
+    justify-content: center;
+
+
+    .button {
+
+        background-color: #890C25;
+        border: none;
+        padding: 14px 32px;
+        border-radius: 8px;
+        color: #fff !important;
+        font-weight: 600;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+
+        i {
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+
     }
 }

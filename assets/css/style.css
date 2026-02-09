@@ -4,7 +4,7 @@
    BASE STYLES
    ========================================= */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Canela trial", sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: #fff;
@@ -35,9 +35,12 @@ a:hover {
 }
 
 .section-container {
+  display: flex;
+  flex-direction: column;
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 15px;
+  gap: 50px 50px;
 }
 
 .section-title {
@@ -54,20 +57,12 @@ a:hover {
   text-transform: uppercase;
 }
 .section-title .title {
-  font-size: 36px;
+  font-size: 64px;
+  line-height: 1.2em;
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
-}
-.section-title .title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #1D8843;
+  gap: 50px 50px;
 }
 .section-title p {
   max-width: 700px;
@@ -75,16 +70,43 @@ a:hover {
   color: #666;
 }
 
+.ex-btn {
+  display: flex;
+  justify-content: center;
+}
+.ex-btn .button {
+  background-color: #890C25;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.ex-btn .button i {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
 /* =========================================
    SECTIONS STYLES - UNIPIX INSPIRED
    ========================================= */
 /* 2. ACADEMICS & PROGRAM */
 .academics-program {
-  background-color: #fff5f6;
+  /* Grid Container - Unipix Style */
+  /* Base Item Styling */
+  /* Stats Box - Top Left */
+  /* Undergraduate Box - Below Stats */
+  /* Main Image Box - Center Tall */
+  /* Image Box (Library/Student Life) - Top Right */
+  /* Graduate Box - Bottom Right */
 }
 .academics-program .section-title {
   text-align: center;
-  margin-bottom: 60px;
 }
 .academics-program .section-title .subtitle {
   display: inline-block;
@@ -101,36 +123,30 @@ a:hover {
   color: #111029;
   margin-bottom: 0;
 }
-
-/* Grid Container - Unipix Style */
-.academics-grid {
+.academics-program .academics-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 0.5fr 1.5fr;
   gap: 24px;
   max-height: 460px;
 }
 @media (max-width: 991px) {
-  .academics-grid {
+  .academics-program .academics-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 }
-
-/* Base Item Styling */
-.academics-item {
+.academics-program .academics-item {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease;
 }
-.academics-item:hover {
+.academics-program .academics-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
-
-/* Stats Box - Top Left */
-.stats-box {
+.academics-program .stats-box {
   background-color: #111029;
   padding: 25px;
   color: #fff;
@@ -142,15 +158,15 @@ a:hover {
   grid-row: 1;
 }
 @media (max-width: 991px) {
-  .stats-box {
+  .academics-program .stats-box {
     grid-column: auto;
     grid-row: auto;
   }
 }
-.stats-box .d-flex {
+.academics-program .stats-box .d-flex {
   align-items: center;
 }
-.stats-box .icon i {
+.academics-program .stats-box .icon i {
   font-size: 28px;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -158,28 +174,26 @@ a:hover {
   border-radius: 12px;
   display: inline-block;
 }
-.stats-box .stars {
+.academics-program .stats-box .stars {
   color: #fff;
   font-size: 14px;
 }
-.stats-box .stars .font-weight-bold {
+.academics-program .stats-box .stars .font-weight-bold {
   font-size: 18px;
   margin-right: 5px;
 }
-.stats-box .stars i {
+.academics-program .stats-box .stars i {
   color: #ffc107;
   font-size: 12px;
 }
-.stats-box h4 {
+.academics-program .stats-box h4 {
   font-size: 22px;
   color: #fff;
   margin-top: 15px;
   margin-bottom: 0;
   font-weight: 700;
 }
-
-/* Undergraduate Box - Below Stats */
-.undergrad-box {
+.academics-program .undergrad-box {
   background: linear-gradient(145deg, #9333ea, #7c3aed);
   padding: 28px;
   color: #fff;
@@ -191,54 +205,54 @@ a:hover {
   grid-row: 2/span 2;
 }
 @media (max-width: 991px) {
-  .undergrad-box {
+  .academics-program .undergrad-box {
     grid-column: auto;
     grid-row: auto;
   }
 }
-.undergrad-box .content {
+.academics-program .undergrad-box .content {
   position: relative;
   z-index: 2;
 }
-.undergrad-box .content .icon {
+.academics-program .undergrad-box .content .icon {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.undergrad-box .content .icon i {
+.academics-program .undergrad-box .content .icon i {
   font-size: 24px;
   margin-right: 12px;
 }
-.undergrad-box .content .icon span {
+.academics-program .undergrad-box .content .icon span {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
 }
-.undergrad-box .content ul {
+.academics-program .undergrad-box .content ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-.undergrad-box .content ul li {
+.academics-program .undergrad-box .content ul li {
   margin-bottom: 10px;
 }
-.undergrad-box .content ul li a {
+.academics-program .undergrad-box .content ul li a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   display: flex;
   align-items: center;
   transition: all 0.3s;
 }
-.undergrad-box .content ul li a:hover {
+.academics-program .undergrad-box .content ul li a:hover {
   color: #fff;
   padding-left: 5px;
 }
-.undergrad-box .content ul li a i {
+.academics-program .undergrad-box .content ul li a i {
   font-size: 10px;
   margin-right: 10px;
   opacity: 0.7;
 }
-.undergrad-box img {
+.academics-program .undergrad-box img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -246,9 +260,7 @@ a:hover {
   z-index: 1;
   opacity: 0.3;
 }
-
-/* Main Image Box - Center Tall */
-.main-image-box {
+.academics-program .main-image-box {
   background-color: #800000;
   /* Grid Placement */
   grid-column: 2;
@@ -256,21 +268,19 @@ a:hover {
   min-height: 380px;
 }
 @media (max-width: 991px) {
-  .main-image-box {
+  .academics-program .main-image-box {
     grid-column: auto;
     grid-row: auto;
     min-height: 300px;
   }
 }
-.main-image-box img {
+.academics-program .main-image-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-/* Image Box (Library/Student Life) - Top Right */
-.image-box {
+.academics-program .image-box {
   min-height: 200px;
   position: relative;
   /* Grid Placement */
@@ -279,18 +289,18 @@ a:hover {
   /* Overlay text label */
 }
 @media (max-width: 991px) {
-  .image-box {
+  .academics-program .image-box {
     grid-column: auto;
     grid-row: auto;
   }
 }
-.image-box img {
+.academics-program .image-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.image-box::after {
+.academics-program .image-box::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -300,9 +310,7 @@ a:hover {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
   pointer-events: none;
 }
-
-/* Graduate Box - Bottom Right */
-.grad-box {
+.academics-program .grad-box {
   background-color: #1e1b4b;
   padding: 28px;
   color: #fff;
@@ -314,54 +322,54 @@ a:hover {
   grid-row: 3;
 }
 @media (max-width: 991px) {
-  .grad-box {
+  .academics-program .grad-box {
     grid-column: auto;
     grid-row: auto;
   }
 }
-.grad-box .content {
+.academics-program .grad-box .content {
   position: relative;
   z-index: 2;
 }
-.grad-box .content .icon {
+.academics-program .grad-box .content .icon {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.grad-box .content .icon i {
+.academics-program .grad-box .content .icon i {
   font-size: 24px;
   margin-right: 12px;
 }
-.grad-box .content .icon span {
+.academics-program .grad-box .content .icon span {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
 }
-.grad-box .content ul {
+.academics-program .grad-box .content ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-.grad-box .content ul li {
+.academics-program .grad-box .content ul li {
   margin-bottom: 10px;
 }
-.grad-box .content ul li a {
+.academics-program .grad-box .content ul li a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   display: flex;
   align-items: center;
   transition: all 0.3s;
 }
-.grad-box .content ul li a:hover {
+.academics-program .grad-box .content ul li a:hover {
   color: #fff;
   padding-left: 5px;
 }
-.grad-box .content ul li a i {
+.academics-program .grad-box .content ul li a i {
   font-size: 10px;
   margin-right: 10px;
   opacity: 0.7;
 }
-.grad-box img {
+.academics-program .grad-box img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -370,29 +378,53 @@ a:hover {
   opacity: 0.3;
 }
 
-/* Explore Button - Unipix Style */
-.btn-explore {
-  background-color: #ef4444;
-  border: none;
-  padding: 14px 32px;
-  border-radius: 8px;
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 15px;
-  transition: all 0.3s ease;
-  display: inline-flex;
+.kham-pha .section-title {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
-.btn-explore:hover {
-  background-color: #dc2626;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+.kham-pha .section-title img {
+  width: 446px;
+  height: auto;
 }
-.btn-explore i {
-  font-size: 14px;
-  transition: transform 0.3s;
+.kham-pha .kham-pha-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 130px;
 }
-.btn-explore:hover i {
-  transform: translateX(5px);
+.kham-pha .kham-pha-inner .video {
+  width: auto;
+  height: auto;
+}
+.kham-pha .kham-pha-inner .video img {
+  width: 480px;
+  height: 600px;
+  border-radius: 12px;
+}
+.kham-pha .kham-pha-inner .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.kham-pha .kham-pha-inner .history {
+  display: flex;
+  gap: 30px;
+}
+.kham-pha .kham-pha-inner .history img {
+  width: 270px;
+  height: 250px;
+  border-radius: 12px;
+}
+.kham-pha .kham-pha-inner p {
+  font-size: 32px;
+  line-height: 1.2em;
+  margin: 0;
+}
+.kham-pha .kham-pha-inner .ex-btn {
+  justify-content: space-between;
+}
+.kham-pha .kham-pha-inner .ex-btn img {
+  width: 288px;
+  height: 60px;
 }
