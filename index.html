@@ -14,588 +14,567 @@
     <!-- Bootstrap 4 CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/ScrollSmoother.min.js"></script>
+
 </head>
 
 <body class="site-layout">
 
-    <!-- HEADER -->
+    <!-- HEADER (Outside smooth scroll to maintain sticky/fixed positioning) -->
     <div id="header-placeholder"></div>
 
-    <!-- SLIDER -->
-    <div class="slider">
-        <div class="owl-carousel owl-theme slide-adv">
-            <div class="item">
-                <a href="#">
-                    <img src="https://placehold.co/1200x450/1D8843/FFFFFF?text=Slide+1" alt="Banner 1">
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <img src="https://placehold.co/1200x450/2C3E50/FFFFFF?text=Slide+2" alt="Banner 2">
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <img src="https://placehold.co/1200x450/cb2f1f/FFFFFF?text=Slide+3" alt="Banner 3">
-                </a>
-            </div>
-        </div>
-    </div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
 
-    <!-- MAIN CONTENT -->
-    <main class="landing-page">
-
-        <!-- ========== Academics & Program ========== -->
-        <div class="academics-program section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <!-- <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span> -->
-                    <!-- Title is already styled in CSS, but let's ensure it matches -->
-                    <h2 class="title font-weight-bold">Academics & Program</h2>
+            <!-- SLIDER -->
+            <div class="slider">
+                <div class="owl-carousel owl-theme slide-adv">
+                    <div class="item">
+                        <a href="#">
+                            <img src="https://placehold.co/1600x450/1D8843/FFFFFF?text=Slide+1" alt="Banner 1">
+                        </a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="academics-grid">
-                    <!-- Item 1: Stats Box -->
-                    <div class="academics-item stats-box">
-                        <div class="d-flex align-items-center">
-                            <div class="icon mr-3">
-                                <i class="fa fa-book"></i>
+            <!-- MAIN CONTENT -->
+            <main class="landing-page">
+
+                <!-- ========== Academics & Program ========== -->
+                <section class="academics-program section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <!-- <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span> -->
+                            <!-- Title is already styled in CSS, but let's ensure it matches -->
+                            <h2 class="title font-weight-bold">Academics & Program</h2>
+                        </div>
+
+                        <div class="academics-grid">
+                            <!-- Item 1: Stats Box -->
+                            <div class="academics-item stats-box">
+                                <div class="d-flex align-items-center">
+                                    <div class="icon mr-3">
+                                        <i class="fa fa-book"></i>
+                                    </div>
+                                    <div>
+                                        <div class="stars">
+                                            <span class="font-weight-bold">4.5</span>
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                class="fa fa-star-half-o"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="mt-3 font-weight-bold">4558+ Admission</h4>
                             </div>
+
+                            <!-- Item 2: Undergraduate Box -->
+                            <div class="academics-item undergrad-box">
+                                <div class="content">
+                                    <div class="icon mb-3">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span class="font-weight-bold h4 ml-2">Undergraduate</span>
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Applied
+                                                Mathematics</a></li>
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Biomedical
+                                                Engineering</a></li>
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i>
+                                                Astrophysics</a>
+                                        </li>
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i>
+                                                Anthropology</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <img src="https://placehold.co/150x200/png?text=Student" alt="Undergraduate">
+                            </div>
+
+                            <!-- Item 3: Main Image Box (Center) -->
+                            <div class="academics-item main-image-box">
+                                <img src="https://placehold.co/600x800/800000/FFFFFF?text=Students+Hero" alt="Students">
+                            </div>
+
+                            <!-- Item 4: Library/Image Box -->
+                            <div class="academics-item image-box">
+                                <img src="https://placehold.co/400x250/orange/white?text=Reading" alt="Library">
+                            </div>
+
+                            <!-- Item 5: Graduate Box -->
+                            <div class="academics-item grad-box">
+                                <div class="content">
+                                    <div class="icon mb-3">
+                                        <i class="fa fa-graduation-cap"></i>
+                                        <span class="font-weight-bold h4 ml-2">Graduate</span>
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Applied
+                                                Mathematics</a></li>
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Biomedical
+                                                Engineering</a></li>
+                                        <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i>
+                                                Astrophysics</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <img src="https://placehold.co/120x150/png?text=Grad" alt="Graduate">
+                            </div>
+                        </div>
+
+                        <!-- Explore Button -->
+                        <div class="ex-btn ">
+                            <a href="#" class="button">
+                                Explore All Program <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== Empowering Minds, Enriching Lives ========== -->
+                <section class="kham-pha section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <h2 class="title font-weight-bold">Empowering Minds, Enriching Lives</h2>
                             <div>
-                                <div class="stars">
-                                    <span class="font-weight-bold">4.5</span>
-                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                                        class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+                                <img src="img/image.png" alt="logo trường">
+                            </div>
+                        </div>
+                        <div class="kham-pha-inner">
+                            <div class="video">
+                                <img src="img/video-truong.png" alt="">
+                            </div>
+                            <div class="content">
+                                <h3>Trường Cao đẳng Bách Khoa - Nơi ươm mầm tài năng và kiến tạo tương lai. Chúng tôi tự
+                                    hào về
+                                    lịch sử hình thành và h3hát triển bền vững.</h3>
+                                <div class="history d-flex">
+                                    <div class="history-icon-1">
+                                        <img src="img/u-1.png" alt="">
+                                    </div>
+                                    <div class="history-icon-2">
+                                        <img src="img/u-2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="ex-btn">
+                                    <a href="#" class="button">Khám phá ngay</a>
+                                    <img src="img/founder.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== Our Faculties & Departments ========== -->
+
+                <section class="chuongtrinhdaotao section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <h2 class="title font-weight-bold">Our Faculties & Departments</h2>
+                            <p>Đội ngũ giảng viên giàu kinh nghiệm cùng chương trình đào tạo thực tiễn tại các khoa
+                                chuyên
+                                ngành.</p>
+                            <div class="ex-btn">
+                                <a href="#" class="button">Xem tất cả các khoa</a>
+                            </div>
+                        </div>
+                        <div class="chuongtrinhdaotao-grid">
+                            <!-- ========== Tối đa 3 ngành xuất hiện ========== -->
+                            <div class="item-nganh">
+                                <div class="thumb">
+                                    <img src="img/nganh-1.png" alt="Công nghệ thông tin" width="100%">
+                                </div>
+                            </div>
+                            <div class="item-nganh">
+                                <div class="thumb">
+                                    <img src="img/nganh-2.png" alt="Kinh tế" width="100%">
+                                </div>
+                            </div>
+                            <div class="item-nganh">
+                                <div class="thumb">
+                                    <img src="img/nganh-3.png" alt="Ngôn ngữ" width="100%">
                                 </div>
                             </div>
                         </div>
-                        <h4 class="mt-3 font-weight-bold">4558+ Admission</h4>
                     </div>
+                </section>
 
-                    <!-- Item 2: Undergraduate Box -->
-                    <div class="academics-item undergrad-box">
-                        <div class="content">
-                            <div class="icon mb-3">
-                                <i class="fa fa-graduation-cap"></i>
-                                <span class="font-weight-bold h4 ml-2">Undergraduate</span>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Applied
-                                        Mathematics</a></li>
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Biomedical
-                                        Engineering</a></li>
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Astrophysics</a>
-                                </li>
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Anthropology</a>
-                                </li>
-                            </ul>
+                <!-- ========== Campus News ========== -->
+                <section class="tin-tuc section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <h2 class="title font-weight-bold">Campus News</h2>
+                            <div class="ex-btn"><a href="#" class="button">Xem tất cả tin tức</a></div>
                         </div>
-                        <img src="https://placehold.co/150x200/png?text=Student" alt="Undergraduate">
-                    </div>
+                        <div class="tintuc-grid">
+                            <div class="item item-featured">
+                                <a class="thumb" href="#">
+                                    <img src="img/campus-1.png" alt="Hợp tác DN" />
+                                </a>
+                                <div class="content">
+                                    <div class="blog__meta">
+                                        <span class="blog__meta-author">
+                                            <a href="#">Admin</a>
+                                        </span>
+                                        <span class="blog__meta-date">
+                                            <p>25/02/2026</p>
+                                        </span>
 
-                    <!-- Item 3: Main Image Box (Center) -->
-                    <div class="academics-item main-image-box">
-                        <img src="https://placehold.co/600x800/800000/FFFFFF?text=Students+Hero" alt="Students">
-                    </div>
-
-                    <!-- Item 4: Library/Image Box -->
-                    <div class="academics-item image-box">
-                        <img src="https://placehold.co/400x250/orange/white?text=Reading" alt="Library">
-                    </div>
-
-                    <!-- Item 5: Graduate Box -->
-                    <div class="academics-item grad-box">
-                        <div class="content">
-                            <div class="icon mb-3">
-                                <i class="fa fa-graduation-cap"></i>
-                                <span class="font-weight-bold h4 ml-2">Graduate</span>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Applied
-                                        Mathematics</a></li>
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Biomedical
-                                        Engineering</a></li>
-                                <li class="mb-2"><a href="#"><i class="fa fa-arrow-right mr-2"></i> Astrophysics</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <img src="https://placehold.co/120x150/png?text=Grad" alt="Graduate">
-                    </div>
-                </div>
-
-                <!-- Explore Button -->
-                <div class="ex-btn ">
-                    <a href="#" class="button">
-                        Explore All Program <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========== Empowering Minds, Enriching Lives ========== -->
-        <div class="kham-pha section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <h2 class="title font-weight-bold">Empowering Minds, Enriching Lives</h2>
-                    <div>
-                        <img src="img/image.png" alt="logo trường">
-                    </div>
-                </div>
-                <div class="kham-pha-inner">
-                    <div class="video">
-                        <img src="img/video-truong.png" alt="">
-                    </div>
-                    <div class="content">
-                        <p>Trường Cao đẳng Bách Khoa - Nơi ươm mầm tài năng và kiến tạo tương lai. Chúng tôi tự hào về
-                            lịch sử hình thành và phát triển bền vững.</p>
-                        <div class="history d-flex">
-                            <div class="history-icon-1">
-                                <img src="img/u-1.png" alt="">
-                            </div>
-                            <div class="history-icon-2">
-                                <img src="img/u-2.png" alt="">
-                            </div>
-                        </div>
-                        <div class="ex-btn">
-                            <a href="#" class="button">Khám phá ngay</a>
-                            <img src="img/founder.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- ========== Our Faculties & Departments ========== -->
-
-        <div class="chuongtrinhdaotao section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                    <h2 class="title font-weight-bold">Our Faculties & Departments</h2>
-                    <p>Đội ngũ giảng viên giàu kinh nghiệm cùng chương trình đào tạo thực tiễn tại các khoa chuyên
-                        ngành.</p>
-                    <div class="Explore mt-3"><a href="#" class="btn btn-outline-primary">Xem tất cả các khoa</a></div>
-                </div>
-                <div class="chuongtrinhdaotao-grid">
-                    <!-- ========== Tối đa 3 ngành xuất hiện ========== -->
-                    <div class="item-nganh-1">
-                        <div class="thumb">
-                            <img src="https://placehold.co/300x200/2C3E50/FFFFFF?text=CNTT" alt="Công nghệ thông tin"
-                                width="100%">
-                        </div>
-                        <div class="name-nganh">Công nghệ Thông tin</div>
-                    </div>
-                    <div class="item-nganh-2">
-                        <div class="thumb">
-                            <img src="https://placehold.co/300x200/cb2f1f/FFFFFF?text=Kinh+Te" alt="Kinh tế"
-                                width="100%">
-                        </div>
-                        <div class="name-nganh">Kinh tế & Quản trị</div>
-                    </div>
-                    <div class="item-nganh-3">
-                        <div class="thumb">
-                            <img src="https://placehold.co/300x200/1D8843/FFFFFF?text=Ngon+Ngu" alt="Ngôn ngữ"
-                                width="100%">
-                        </div>
-                        <div class="name-nganh">Ngôn ngữ Anh</div>
-                    </div>
-                    <div class="item-nganh-4">
-                        <div class="thumb">
-                            <img src="https://placehold.co/300x200/34495e/FFFFFF?text=Du+Lich" alt="Du lịch"
-                                width="100%">
-                        </div>
-                        <div class="name-nganh">Du lịch & Khách sạn</div>
-                    </div>
-                    <div class="item-nganh-5">
-                        <div class="thumb">
-                            <img src="https://placehold.co/300x200/f39c12/FFFFFF?text=Dien+Tu" alt="Điện tử"
-                                width="100%">
-                        </div>
-                        <div class="name-nganh">Điện tử - Tự động hóa</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========== Campus News ========== -->
-        <div class="hoptac-doanhnghiep section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                    <h2 class="title font-weight-bold">Campus News</h2>
-                    <div class="mt-2"><a href="#">Xem tất cả tin tức</a></div>
-                </div>
-                <div class="hoptac-grid">
-                    <div class="hoptac-featured">
-                        <div class="item item-featured">
-                            <a class="thumb" href="#">
-                                <img src="https://placehold.co/600x400/1D8843/FFFFFF?text=Hop+tac+DN"
-                                    alt="Hợp tác DN" />
-                            </a>
-                            <div class="content">
-                                <div>
-                                    <span>
-                                        <p class="thongtin">Thông tin nơi có tin tức-1</p>
-                                    </span>
-                                    <h3><a href="#">tiêu đề tin tức-1</a></h3>
-                                    <p>thông tin về tin tức-1</p>
+                                    </div>
+                                    <h3><a href="#">Those inequalities are inequalities that occur within</a></h3>
+                                    <p>10 Effective Study Tips for College Success Welcome</p>
+                                    <div class="read-more">
+                                        <a href="#">Read more</a>
+                                        <img src="img/arrow-right.png" alt="">
+                                    </div>
                                 </div>
-                                <div>Read more</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="hoptac-list">
-                        <div class="item item-small-horizontal-1">
-                            <a class="thumb" href="#">
-                                <img src="https://placehold.co/600x400/1D8843/FFFFFF?text=Hop+tac+DN"
-                                    alt="Hợp tác DN" />
-                            </a>
-                            <div class="content">
-                                <div>
-                                    <span>
-                                        <p class="thongtin">Thông tin nơi có tin tức-2</p>
-                                    </span>
+                            <div class="item item-small-horizontal-1">
+                                <a class="thumb" href="#">
+                                    <img src="img/campus-2.png" alt="Hợp tác DN" />
+                                </a>
+                                <div class="content">
+                                    <div class="blog__meta">
+                                        <span class="blog__meta-author">
+                                            <a href="#">Admin</a>
+                                        </span>
+                                        <span class="blog__meta-date">
+                                            <p>25/02/2026</p>
+                                        </span>
+                                    </div>
                                     <h3><a href="#">tiêu đề tin tức-2</a></h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item item-small-horizontal-2">
-                            <a class="thumb" href="#">
-                                <img src="https://placehold.co/600x400/1D8843/FFFFFF?text=Hop+tac+DN"
-                                    alt="Hợp tác DN" />
-                            </a>
-                            <div class="content">
-                                <div>
-                                    <span>
-                                        <p class="thongtin">Thông tin nơi có tin tức-3</p>
-                                    </span>
+                            <div class="item item-small-horizontal-2">
+                                <a class="thumb" href="#">
+                                    <img src="img/campus-3.png" alt="Hợp tác DN" />
+                                </a>
+                                <div class="content">
+                                    <div class="blog__meta">
+                                        <span class="blog__meta-author">
+                                            <a href="#">Admin</a>
+                                        </span>
+                                        <span class="blog__meta-date">
+                                            <p>25/02/2026</p>
+                                        </span>
+                                    </div>
                                     <h3><a href="#">tiêu đề tin tức-3</a></h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
 
-        <!-- ========== University Professors ========== -->
-        <div class="hoptac-quocte section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                    <h2 class="title font-weight-bold">University Professors</h2>
-                </div>
-                <div class="owl-carousel owl-theme guongmat-carousel">
-                    <div class="item">
-                        <div class="professor-item">
-                            <div class="thumb">
-                                <img src="https://placehold.co/400x500/2C3E50/FFFFFF?text=GV+1" alt="Giảng viên 1">
-                            </div>
-                            <div class="info">
-                                <h3>Nguyễn Văn A</h3>
-                                <p>Giảng viên CNTT - Chuyên gia AI</p>
-                            </div>
+                <!-- ========== University Professors ========== -->
+                <section class="hoptac-quocte section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <h2 class="title font-weight-bold">University Professors</h2>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="professor-item">
-                            <div class="thumb">
-                                <img src="https://placehold.co/400x500/cb2f1f/FFFFFF?text=GV+2" alt="Giảng viên 2">
-                            </div>
-                            <div class="info">
-                                <h3>Trần Thị B</h3>
-                                <p>Giảng viên Thiết kế Đồ họa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="professor-item">
-                            <div class="thumb">
-                                <img src="https://placehold.co/400x500/1D8843/FFFFFF?text=GV+3" alt="Giảng viên 3">
-                            </div>
-                            <div class="info">
-                                <h3>Lê Văn C</h3>
-                                <p>Giảng viên Quản trị Kinh doanh</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="professor-item">
-                            <div class="thumb">
-                                <img src="https://placehold.co/400x500/34495e/FFFFFF?text=GV+4" alt="Giảng viên 4">
-                            </div>
-                            <div class="info">
-                                <h3>Phạm Thị D</h3>
-                                <p>Giảng viên Tiếng Anh</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="owl-carousel owl-theme guongmat-carousel">
+                            <div class="item">
+                                <div class="professor-item">
+                                    <div class="thumb">
+                                        <img src="https://placehold.co/400x500/2C3E50/FFFFFF?text=GV+1"
+                                            alt="Giảng viên 1">
+                                        <div class="social-wrapper">
+                                            <button class="social-toggle">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
 
-        <!-- ========== University Professors ========== -->
-        <div class="video section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                    <h2 class="title font-weight-bold">Giới thiệu về nhà trường</h2>
-                </div>
-                <div class="video-featured">
-                    <div class="video-main">
-                        <img src="https://img.youtube.com/vi/TSUcVLHOZjI/maxresdefault.jpg"
-                            alt="Giới thiệu Trường Cao đẳng Bách Khoa" />
-                        <a class="player" href="https://www.youtube.com/watch?v=TSUcVLHOZjI" target="_blank"
-                            rel="noopener">
-                            <img alt="Play Video" src="assets/images/player.png" />
-                        </a>
-                    </div>
-                </div>
-                <div class="video-thumbnails">
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/KgiK1cBd5Fw/mqdefault.jpg" alt="Video giới thiệu" />
-                        <a class="player" href="https://www.youtube.com/watch?v=KgiK1cBd5Fw" target="_blank"
-                            rel="noopener">
-                            <img alt="Play" src="assets/images/player.png" />
-                        </a>
-                    </div>
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/IN1-qd0jzVo/mqdefault.jpg" alt="Video giới thiệu" />
-                        <a class="player" href="https://www.youtube.com/watch?v=IN1-qd0jzVo" target="_blank"
-                            rel="noopener">
-                            <img alt="Play" src="assets/images/player.png" />
-                        </a>
-                    </div>
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/TSUcVLHOZjI/mqdefault.jpg" alt="Video giới thiệu" />
-                        <a class="player" href="https://www.youtube.com/watch?v=TSUcVLHOZjI" target="_blank"
-                            rel="noopener">
-                            <img alt="Play" src="assets/images/player.png" />
-                        </a>
-                    </div>
-                    <div class="video-thumb">
-                        <img src="https://img.youtube.com/vi/KgiK1cBd5Fw/mqdefault.jpg" alt="Video giới thiệu" />
-                        <a class="player" href="https://www.youtube.com/watch?v=KgiK1cBd5Fw" target="_blank"
-                            rel="noopener">
-                            <img alt="Play" src="assets/images/player.png" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ========== Upcoming Event ========== -->
-        <div class="upcoming-event section-container section-padding">
-            <div class="section-title text-center mb-5">
-                <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                <h2 class="title font-weight-bold">Upcoming Event</h2>
-            </div>
-            <div class="event-list">
-                <div class="event-item mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-md-4">
-                            <a class="thumb d-block" href="#">
-                                <img class="img-fluid rounded"
-                                    src="https://placehold.co/400x250/1D8843/FFFFFF?text=Event+1" alt="Sự kiện 1">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="content pl-md-3">
-                                <h3><a href="#">Ngày hội việc làm Bách Khoa 2026</a></h3>
-                                <div class="meta text-muted mb-2">
-                                    <span class="mr-3"><i class="fa fa-calendar"></i> 20/03/2026</span>
-                                    <span><i class="fa fa-map-marker"></i> Hội trường A</span>
-                                </div>
-                                <p>Cơ hội gặp gỡ hơn 50 doanh nghiệp hàng đầu và phỏng vấn trực tiếp cho sinh viên năm
-                                    cuối.</p>
-                                <a href="#" class="btn btn-sm btn-outline-success mt-2">Tham gia ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-item mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-md-4">
-                            <a class="thumb d-block" href="#">
-                                <img class="img-fluid rounded"
-                                    src="https://placehold.co/400x250/2C3E50/FFFFFF?text=Event+2" alt="Sự kiện 2">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="content pl-md-3">
-                                <h3><a href="#">Talkshow: Kỹ năng mềm trong kỷ nguyên số</a></h3>
-                                <div class="meta text-muted mb-2">
-                                    <span class="mr-3"><i class="fa fa-calendar"></i> 15/03/2026</span>
-                                    <span><i class="fa fa-map-marker"></i> Phòng Hội thảo</span>
-                                </div>
-                                <p>Chia sẻ từ các chuyên gia hàng đầu về kỹ năng cần thiết cho sinh viên trong thời đại
-                                    4.0.</p>
-                                <a href="#" class="btn btn-sm btn-outline-success mt-2">Tham gia ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-item mb-4">
-                    <div class="row align-items-center">
-                        <div class="col-md-4">
-                            <a class="thumb d-block" href="#">
-                                <img class="img-fluid rounded"
-                                    src="https://placehold.co/400x250/cb2f1f/FFFFFF?text=Event+3" alt="Sự kiện 3">
-                            </a>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="content pl-md-3">
-                                <h3><a href="#">Lễ trao bằng tốt nghiệp đợt 1 năm 2026</a></h3>
-                                <div class="meta text-muted mb-2">
-                                    <span class="mr-3"><i class="fa fa-calendar"></i> 10/03/2026</span>
-                                    <span><i class="fa fa-map-marker"></i> Hội trường lớn</span>
-                                </div>
-                                <p>Chúc mừng các tân cử nhân đã hoàn thành xuất sắc chương trình học tập.</p>
-                                <a href="#" class="btn btn-sm btn-outline-success mt-2">Xem chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ========== Testimonial ========== -->
-        <div class="testimonial section-padding">
-            <div class="section-container">
-                <div class="section-title text-center mb-5">
-                    <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in Education</span>
-                    <h2 class="title font-weight-bold">Testimonials</h2>
-                </div>
-                <div class="owl-carousel owl-theme testimonial-carousel">
-                    <div class="item">
-                        <div class="testimonial-box">
-                            <div class="content">
-                                <p>"Môi trường học tập tại BTEC FPT rất năng động và sáng tạo. Tôi được tiếp cận với các
-                                    phương pháp học tập hiện đại, giúp tôi phát triển toàn diện các kỹ năng."</p>
-                            </div>
-                            <div class="author">
-                                <div class="thumb">
-                                    <img src="https://placehold.co/100x100/1D8843/FFFFFF?text=SV+1" alt="Sinh viên 1">
-                                </div>
-                                <div class="info">
-                                    <h4>Nguyễn Văn A</h4>
-                                    <span>Sinh viên K15 - CNTT</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-box">
-                            <div class="content">
-                                <p>"Các giảng viên rất nhiệt tình và tâm huyết. Trường cũng có nhiều hoạt động ngoại
-                                    khóa bổ ích giúp sinh viên giải tỏa căng thẳng sau giờ học."</p>
-                            </div>
-                            <div class="author">
-                                <div class="thumb">
-                                    <img src="https://placehold.co/100x100/2C3E50/FFFFFF?text=SV+2" alt="Sinh viên 2">
-                                </div>
-                                <div class="info">
-                                    <h4>Trần Thị B</h4>
-                                    <span>Sinh viên K16 - Thiết kế đồ họa</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial-box">
-                            <div class="content">
-                                <p>"Cơ sở vật chất hiện đại, phòng thực hành đầy đủ trang thiết bị. Tôi rất hài lòng về
-                                    chất lượng đào tạo của nhà trường."</p>
-                            </div>
-                            <div class="author">
-                                <div class="thumb">
-                                    <img src="https://placehold.co/100x100/cb2f1f/FFFFFF?text=SV+3" alt="Sinh viên 3">
-                                </div>
-                                <div class="info">
-                                    <h4>Lê Văn C</h4>
-                                    <span>Cựu sinh viên K12</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ========== Admission Form ========== -->
-        <div class="admission-form-section section-container ky-tuyen-sinh">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="admission-info">
-                        <h2 class="title" style="margin-bottom: 20px;">Đăng ký xét tuyển trực tuyến</h2>
-                        <p class="desc">Trở thành sinh viên Bách Khoa ngay hôm nay! Hãy để lại thông tin, Ban tư vấn
-                            tuyển sinh sẽ liên hệ hỗ trợ bạn chọn ngành nghề phù hợp nhất.</p>
-                        <ul class="contact-list" style="list-style: none; padding-left: 0; margin-top: 30px;">
-                            <li style="margin-bottom: 15px;"><i class="fa fa-phone"
-                                    style="margin-right: 10px; color: #d32f2f;"></i> <strong>Hotline:</strong>
-                                0987.654.321</li>
-                            <li style="margin-bottom: 15px;"><i class="fa fa-envelope"
-                                    style="margin-right: 10px; color: #d32f2f;"></i> <strong>Email:</strong>
-                                tuyensinh@caodangbachkhoa.edu.vn</li>
-                            <li style="margin-bottom: 15px;"><i class="fa fa-map-marker"
-                                    style="margin-right: 10px; color: #d32f2f;"></i> <strong>Địa chỉ:</strong> Số 123,
-                                Đường ABC, Quận XYZ, Hà Nội</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="admission-box" style="background: #f8f9fa; padding: 30px; border-radius: 8px;">
-                        <form action="#" method="POST">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Họ và tên thí sinh" required
-                                    style="height: 45px;">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="tel" class="form-control" placeholder="Số điện thoại" required
-                                            style="height: 45px;">
+                                            <div class="social-icons">
+                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email liên hệ" required
-                                            style="height: 45px;">
+                                    <div class="info">
+                                        <h3>Nguyễn Văn A</h3>
+                                        <p>Giảng viên CNTT - Chuyên gia AI</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <select class="form-control" style="height: 45px;">
-                                    <option value="" disabled selected>Chọn ngành học quan tâm</option>
-                                    <option value="cntt">Công nghệ thông tin</option>
-                                    <option value="tkdh">Thiết kế đồ họa</option>
-                                    <option value="qtkd">Quản trị kinh doanh</option>
-                                    <option value="dlnh">Du lịch & Nhà hàng</option>
-                                    <option value="nnan">Ngôn ngữ Anh</option>
-                                    <option value="other">Ngành khác</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3"
-                                    placeholder="Ghi chú hoặc câu hỏi (nếu có)"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-danger btn-block"
-                                style="background-color: #d32f2f; border: none; padding: 12px; font-weight: bold; text-transform: uppercase;">Đăng
-                                ký ngay</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+                            <div class="item">
+                                <div class="professor-item">
+                                    <div class="thumb">
+                                        <img src="https://placehold.co/400x500/cb2f1f/FFFFFF?text=GV+2"
+                                            alt="Giảng viên 2">
+                                        <div class="social-wrapper">
+                                            <button class="social-toggle">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
 
-    <!-- FOOTER -->
-    <div id="footer-placeholder"></div>
+                                            <div class="social-icons">
+                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Trần Thị B</h3>
+                                        <p>Giảng viên Thiết kế Đồ họa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="professor-item">
+                                    <div class="thumb">
+                                        <img src="https://placehold.co/400x500/1D8843/FFFFFF?text=GV+3"
+                                            alt="Giảng viên 3">
+                                        <div class="social-wrapper">
+                                            <button class="social-toggle">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+
+                                            <div class="social-icons">
+                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lê Văn C</h3>
+                                        <p>Giảng viên Quản trị Kinh doanh</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="professor-item">
+                                    <div class="thumb">
+                                        <img src="https://placehold.co/400x500/34495e/FFFFFF?text=GV+4"
+                                            alt="Giảng viên 4">
+                                        <div class="social-wrapper">
+                                            <button class="social-toggle">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+
+                                            <div class="social-icons">
+                                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Phạm Thị D</h3>
+                                        <p>Giảng viên Tiếng Anh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== Upcoming Event ========== -->
+                <section class="upcoming-event section-container section-padding">
+                    <div class="section-title text-center mb-5">
+                        <h2 class="title font-weight-bold">Upcoming Event</h2>
+                    </div>
+                    <div class="event-list">
+                        <div class="event-item mb-4">
+                            <div class="row align-items-center">
+                                <div class="content pl-md-3">
+                                    <h3><a href="#">Ngày hội việc làm Bách Khoa 2026 212</a></h3>
+                                    <div class="date">
+                                        <span>20/03/2026</span>
+                                    </div>
+                                    <div class="location">
+                                        <span>Hội trường A</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-success mt-2">Tham gia ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-item mb-4">
+                            <div class="row align-items-center">
+                                <div class="content pl-md-3">
+                                    <h3><a href="#">Talkshow: Kỹ năng mềm trong kỷ nguyên số</a></h3>
+                                    <div class="date">
+                                        <span> 15/03/2026</span>
+                                    </div>
+                                    <div class="location">
+                                        <span> Phòng Hội thảo</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-success mt-2">Tham gia ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-item mb-4">
+                            <div class="row align-items-center">
+                                <div class="content pl-md-3">
+                                    <h3><a href="#">Lễ trao bằng tốt nghiệp đợt 1 năm 2026</a></h3>
+                                    <div class="date">
+                                        <span> 10/03/2026</span>
+                                    </div>
+                                    <div class="location">
+                                        <span> Hội trường lớn</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-success mt-2">Tham gia ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ========== Testimonial ========== -->
+                <section class="testimonial section-padding">
+                    <div class="section-container">
+                        <div class="section-title text-center mb-5">
+                            <span class="subtitle text-uppercase text-danger font-weight-bold">Excellence in
+                                Education</span>
+                            <h2 class="title font-weight-bold">Testimonials</h2>
+                        </div>
+                        <div class="owl-carousel owl-theme testimonial-carousel">
+                            <div class="item">
+                                <div class="testimonial-box">
+                                    <div class="content">
+                                        <p>"Môi trường học tập tại BTEC FPT rất năng động và sáng tạo. Tôi được tiếp cận
+                                            với các
+                                            phương pháp học tập hiện đại, giúp tôi phát triển toàn diện các kỹ năng."
+                                        </p>
+                                    </div>
+                                    <div class="author">
+                                        <div class="thumb">
+                                            <img src="https://placehold.co/100x100/1D8843/FFFFFF?text=SV+1"
+                                                alt="Sinh viên 1">
+                                        </div>
+                                        <div class="info">
+                                            <h4>Nguyễn Văn A</h4>
+                                            <span>Sinh viên K15 - CNTT</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-box">
+                                    <div class="content">
+                                        <p>"Các giảng viên rất nhiệt tình và tâm huyết. Trường cũng có nhiều hoạt động
+                                            ngoại
+                                            khóa bổ ích giúp sinh viên giải tỏa căng thẳng sau giờ học."</p>
+                                    </div>
+                                    <div class="author">
+                                        <div class="thumb">
+                                            <img src="https://placehold.co/100x100/2C3E50/FFFFFF?text=SV+2"
+                                                alt="Sinh viên 2">
+                                        </div>
+                                        <div class="info">
+                                            <h4>Trần Thị B</h4>
+                                            <span>Sinh viên K16 - Thiết kế đồ họa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonial-box">
+                                    <div class="content">
+                                        <p>"Cơ sở vật chất hiện đại, phòng thực hành đầy đủ trang thiết bị. Tôi rất hài
+                                            lòng về
+                                            chất lượng đào tạo của nhà trường."</p>
+                                    </div>
+                                    <div class="author">
+                                        <div class="thumb">
+                                            <img src="https://placehold.co/100x100/cb2f1f/FFFFFF?text=SV+3"
+                                                alt="Sinh viên 3">
+                                        </div>
+                                        <div class="info">
+                                            <h4>Lê Văn C</h4>
+                                            <span>Cựu sinh viên K12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="admission-intro-section section-padding">
+                    <div class="admission-container section-container">
+                        <div class="admission-image-box">
+                            <img src="img/admisson.png" alt="Students">
+                        </div>
+
+                        <div class="admission-content-box">
+                            <div class="title">
+                                <h2 class="admission-title">Admission At Unipix University Academic</h2>
+                            </div>
+                            <p class="admission-desc">Begin your academic journey with us. At Unipix University, we
+                                welcome
+                                students from diverse backgrounds to join our vibrant learning community.</p>
+                            <div class="admission-signature">
+                                <span>Jon Kibria</span>
+                            </div>
+
+                            <div class="play-badge-wrapper">
+                                <div class="play-badge">
+                                    <svg viewBox="0 0 100 100">
+                                        <path id="circlePath"
+                                            d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                                        <text font-size="10">
+                                            <textPath xlink:href="#circlePath">
+                                                * Estd. 1971 * Explore Future Unipix University *
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="play-icon">
+                                        <i class="fa fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========== Admission Form Overlay Section ========== -->
+                <section class="admission-form-overlay-section">
+                    <div class="admission-container">
+                        <div class="empty-space"></div> <!-- Offset for the left content -->
+                        <div class="admission-form-box">
+                            <div class="admission-form-card">
+                                <h3 class="form-title">Admission Form</h3>
+                                <form action="#" method="POST">
+                                    <div class="form-row">
+                                        <input type="text" placeholder="First Name" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" placeholder="Address" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" placeholder="Country" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" placeholder="ngành học" required>
+                                    </div>
+                                    <button type="submit" class="admission-submit-btn">Apply Now <i
+                                            class="fa fa-arrow-right"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- FOOTER -->
+                <div id="footer-placeholder"></div>
+
+        </div><!-- #smooth-content -->
+    </div><!-- #smooth-wrapper -->
 
     <!-- Scripts -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>

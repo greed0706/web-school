@@ -1,182 +1,101 @@
-<!-- Overlay for mobile menu -->
-<div class="click_out"></div>
+<!-- Overlay for mobile/off-canvas menu -->
+<div class="header-overlay"></div>
 
-<!-- MOBILE MENU -->
-<div id="menu-mobile">
-    <div class="nav_mobile">
-        <div class="logo-side">
+
+
+<!-- OFF-CANVAS SIDEBAR (Information / Extra menu) -->
+<div id="menu-wrap-off" class="menu-wrap-off">
+    <div class="offcanvas-header">
+        <button class="offcanvas-close" onclick="closeOffcanvas()" title="Close">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+    <div class="offcanvas-inner">
+        <div class="offcanvas-logo">
             <a href="/">
-                <img src="assets/images/logo.jpg" alt="Cao đẳng Bách Khoa">
+                <img src="assets/images/logo.jpg" alt="Unipix University">
             </a>
         </div>
-        <ul class="mobile-menu">
-            <li><a href="#">Trang chủ</a></li>
-            <li class="has-submenu">
-                <a href="#">Giới thiệu</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="#">Lịch sử phát triển</a></li>
-                    <li><a href="#">Tầm nhìn & Sứ mệnh</a></li>
-                    <li><a href="#">Đội ngũ giảng viên</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu"><a href="#">Tuyển sinh</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="#">Lịch sử phát triển</a></li>
-                    <li><a href="#">Tầm nhìn & Sứ mệnh</a></li>
-                    <li><a href="#">Đội ngũ giảng viên</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#">Tuyển Sinh</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="">Chương trình đào tạo</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="">Đời sống BTEC</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="">Doanh nghiệp & Việc làm</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="">Học Sinh 2k7</a>
-                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                <ul class="sub-menu">
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="offcanvas-desc">
+            <p>A modern HTML template for education, offering intuitive design & essential features for seamless
+                learning experiences.</p>
+        </div>
+
+        <div class="offcanvas-banner">
+            <img src="https://placehold.co/400x500/cb2f1f/FFFFFF?text=COMMITTED+TO+EDUCATION" alt="Education Banner">
+            <a href="#" class="apply-btn">Apply Now <i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="offcanvas-contact">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><i class="fa fa-map-marker"></i> 146 Phố Tây Sơn, Hà Nội</li>
+                <li><i class="fa fa-phone"></i> 0868 56 11 56</li>
+                <li><i class="fa fa-envelope"></i> lienhe@caodangbachkhoa.edu.vn</li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<!-- HEADER -->
-<header>    
-    <div class="header-container">
+<!-- HEADER MAIN -->
+<header class="header-main sticky-header">
+    <div class="header-container container-fluid">
         <div class="header-row">
-            <!-- Logo Column -->
+            <!-- Logo -->
             <div class="header-logo">
-                <div class="logo-wrapper">
-                    <div class="logo">
-                        <a href="/">
-                            <img src="assets/images/logo.jpg" alt="Cao đẳng Bách Khoa">
-                        </a>
-                    </div>
-                </div>
+                <a href="/">
+                    <img src="img/logo.png" alt="Unipix University">
+                </a>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="header-mobile-btn">
-                <div class="open-nav" onclick="openNav()">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <!-- Top Bar + Menu Combined Column -->
-            <div class="header-middle">
-                <div class="header-right-wrapper">
-                    <!-- Main Menu -->
-                    <div class="menu-home">
-                        <ul class="menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Trang Chủ</a>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Giới thiệu</a>
-                                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                                <div class="sub_menu">
-                                    <ul>
-                                        <li><a href="#">Lịch sử phát triển</a></li>
-                                        <li><a href="#">Tầm nhìn & Sứ mệnh</a></li>
-                                        <li><a href="#">Đội ngũ giảng viên</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#">Tuyển sinh</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Sinh viên</a>
-                                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                                <div class="sub_menu">
-                                    <ul>
-                                        <li><a href="#">Hoạt động sinh viên</a></li>
-                                        <li><a href="#">Cơ hội việc làm</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Chương trình đào tạo</a>
-                                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                                <div class="sub_menu">
-                                    <ul>
-                                        <li><a href="#">Hợp tác doanh nghiệp</a></li>
-                                        <li><a href="#">Hợp tác quốc tế</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Doanh nghiệp & Việc làm</a>
-                                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                                <div class="sub_menu">
-                                    <ul>
-                                        <li><a href="#">Hợp tác doanh nghiệp</a></li>
-                                        <li><a href="#">Hợp tác quốc tế</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Học sinh 2k7</a>
-                                <button class="accordion" title="Mở menu con"><i class="fa fa-angle-down"></i></button>
-                                <div class="sub_menu">
-                                    <ul>
-                                        <li><a href="#">Hợp tác doanh nghiệp</a></li>
-                                        <li><a href="#">Hợp tác quốc tế</a></li>
-                                    </ul>
-                                </div>
-                            </li>
+            <!-- Desktop Navigation -->
+            <nav class="desktop-menu">
+                <ul class="main-menu">
+                    <li class="has-children">
+                        <a href="#">Home +</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Home 01</a></li>
+                            <li><a href="#">Home 02</a></li>
+                            <li><a href="#">Home 03</a></li>
+                            <li><a href="#">Home 08</a></li>
                         </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Pages +</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-children"><a href="#">Academics +</a></li>
+                    <li class="has-children"><a href="#">Student Services +</a></li>
+                    <li class="has-children"><a href="#">Blog +</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Right (Icons) -->
+            <div class="header-right">
+                <div class="header-icon search-trigger">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="icon-separator"></div>
+                <div class="header-icon lang-switcher">
+                    <span>ENG</span> <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="header-icon menu-trigger" onclick="openOffcanvas()">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
 
-            <div class="header-right">
-                <div><a href="#">search</a></div>
-                <div><a href="#">language</a></div>
-                <div><a href="#">btn-more-4-row</a></div>
-            </div>
-            <div class="menu-wrap-off">
-                <div class="menu-wrap-off-item"><a href="#">close</a></div>
-                <div class="menu-wrap-off-item"><a href="#">logo</a></div>
-                <div class="menu-wrap-off-item"><a href="#">text info</a></div>
-                <div class="menu-wrap-off-item"><a href="#">img and btn-aply</a></div>
-                <div class="menu-wrap-off-item"><a href="#">infomation</a></div>
-                
+            <!-- Mobile Menu Toggle (Visible only on mobile) -->
+            <div class="mobile-menu-toggle" onclick="openNav()">
+                <i class="fa fa-bars"></i>
             </div>
         </div>
     </div>

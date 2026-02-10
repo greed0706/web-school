@@ -1,11 +1,21 @@
 /* =========================================
    BASE STYLES
    ========================================= */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-family;
     color: $text-color;
     line-height: 1.6;
     background-color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section {
+    will-change: transform;
 }
 
 h1,
@@ -30,7 +40,7 @@ a {
 }
 
 .section-padding {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .section-container {
@@ -38,12 +48,10 @@ a {
     flex-direction: column;
     max-width: 1260px;
     margin: 0 auto;
-    padding: 0 15px;
     gap: 50px 50px;
 }
 
 .section-title {
-    margin-bottom: 50px;
     position: relative;
 
     .subtitle {
@@ -52,16 +60,14 @@ a {
         letter-spacing: 2px;
         margin-bottom: 10px;
         color: $accent-color;
-        font-weight: 700;
         text-transform: uppercase;
     }
 
     .title {
         font-size: 64px;
-        line-height: 1.2em;
+        line-height: 1.1em;
         margin-bottom: 15px;
         position: relative;
-        padding-bottom: 15px;
         gap: 50px 50px;
 
     }
@@ -70,6 +76,7 @@ a {
         max-width: 700px;
         margin: 0 auto;
         color: #666;
+        font-family: $font-button;
     }
 }
 
@@ -87,6 +94,7 @@ a {
         color: #fff !important;
         font-weight: 600;
         font-size: 15px;
+        font-family: $font-button;
         transition: all 0.3s ease;
         display: inline-flex;
         align-items: center;
